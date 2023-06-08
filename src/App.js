@@ -1,17 +1,11 @@
 import './App.css';
 
+import {Main} from "./pages/main/main";
+
 function App() {
-  return (
-    <div className="App">
-      <div>dsfdsfdsfds</div>
-        <div>dsfdsfdsfds</div><div>dsfdsfdsfds</div><div>dsfdsfdsfds</div><div>dsfdsfdsfds</div><div>dsfdsfdsfds</div><div>dsfdsfdsfds</div>
-
-
-
-
-
-    </div>
-  );
+    return(
+        <Main/>
+    );
 }
 
 export default App;

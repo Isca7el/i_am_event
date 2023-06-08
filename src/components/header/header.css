@@ -1,0 +1,11 @@
+@import "/src/assets/colors.css";
+
+.header{
+    background: var(--blue);
+    padding: 30px 0;
+}
+
+.title{
+    color: var(--white);
+    text-align: center;
+}
