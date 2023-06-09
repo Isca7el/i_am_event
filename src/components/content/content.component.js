@@ -3,7 +3,6 @@ import {CardComponent} from "../card/card.component";
 
 export const ContentComponent = (props) => {
     const data = props.data;
-    console.log(data);
 
     return(
             data.flights.map((item, i) => {
