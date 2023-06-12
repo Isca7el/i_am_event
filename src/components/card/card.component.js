@@ -1,6 +1,5 @@
 import './card.css';
 import {hoursToNumber} from "../../utils/hoursToNumber";
-
 export const CardComponent = (props) => {
     const data = props.item;
 
