@@ -6,9 +6,9 @@ export const useSort = (value, sortParameter) => {
         case 'cheap':
             return sortData = {flights: value?.flights?.sort((a, b) => a.price - b.price)};
         case 'min':
-            return {flights: value?.flights?.sort((a, b) => b.stops - a.stops)};
+            return sortData = {flights: value?.flights?.sort((a, b) => a.stops - b.stops)};
         case 'max':
-            return {flights: value?.flights?.sort((a, b) => a.stops - b.stops)};
+            return sortData = {flights: value?.flights?.sort((a, b) => b.stops - a.stops)};
         default:
             return sortData = value;
     }

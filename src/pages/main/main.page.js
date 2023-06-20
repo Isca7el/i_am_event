@@ -17,7 +17,7 @@ export const MainPage = () => {
     return (
             <Fragment>
                 <HeaderComponent/>
-                <Panel data={currentData} setChangedData={setChangedData}/>
+                <Panel data={currentData} setChangedData={setChangedData} defaultData={data.data}/>
                 {
                     data.isLoading ? <LoadingComponent/> :
                     <ContentComponent data={currentData}/>
