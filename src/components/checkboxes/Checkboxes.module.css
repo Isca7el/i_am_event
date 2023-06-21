@@ -1,0 +1,16 @@
+.checkboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    min-width: 180px;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.label{
+    display: flex;
+    align-items: center;
+}

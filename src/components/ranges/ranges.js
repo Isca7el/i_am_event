@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {getCountedValues} from "../../utils/getCountedValyes";
 import {getMin} from "../../utils/getMin";
 import {getMax} from "../../utils/getMax";
+import styles from './Ranges.module.css';
 
 export const Ranges = (props) => {
     const {
@@ -71,7 +72,7 @@ export const Ranges = (props) => {
         }, 300)
 
         return () => clearInterval(Debounce);
-    }, [searchTermByOrigin, searchTermByDestination, defaultData]);
+    }, [defaultData]);
 
     function setRangeValue(obj) {
         const res = {};
@@ -107,7 +108,16 @@ export const Ranges = (props) => {
         addOrRemoveValueFilterArray(rangeId, rangeValue);
     }
     function resetFilter() {
-        setChangedData(defaultData)
+        setChangedData({...defaultData})
+
+        let updatedRangesValues = setRangeValue(data);
+        for (let key in updatedRangesValues) {
+            if (updatedRangesValues.hasOwnProperty(key)) {
+                updatedRangesValues[key].currentValue = updatedRangesValues[key].min;
+            }
+        }
+
+        setRangeValues({...updatedRangesValues});
     }
 
     return (
@@ -115,18 +125,20 @@ export const Ranges = (props) => {
             {
                 rangesArr.map((item, i) => {
                     return (
-                        <div key={i}>
-                            <div style={{"display": "flex", "flexDirection": "row"}}>
-                                <h3>{[item].min}</h3><h3>{rangeValues[item].currentValue}</h3>
-                                <h4>{rangeValues[item].max}</h4></div>
-                            <input min={rangeValues[item].min} max={rangeValues[item].max}
+                        <div key={i} className={styles.ranges}>
+                            <h3 className={styles.ranges_title}>{range[item]?.title}</h3>
+                            <div style={{"display": "flex", "flexDirection": "row", "width": "100%", "justifyContent": "space-between"}}>
+                                <h3 className={styles.ranges_subtitle}>{rangeValues[item].min}</h3><h3 className={styles.ranges_subtitle}>{rangeValues[item].currentValue}</h3>
+                                <h4 className={styles.ranges_subtitle}>{rangeValues[item].max}</h4></div>
+                            <input  className={styles.range}
+                                    min={rangeValues[item].min} max={rangeValues[item].max}
                                    value={rangeValues[item].currentValue} id={item} type="range"
                                    onChange={handleRangeValues}/>
                         </div>
                     )
                 })
             }
-            <button onClick={resetFilter}>Сбросить стили</button>
+            <button className={styles.button} onClick={resetFilter}>Сбросить стили</button>
         </div>
     )
 }

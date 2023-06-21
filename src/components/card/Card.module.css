@@ -1,0 +1,40 @@
+.card {
+    border: solid 1px var(--black);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 20px;
+}
+
+.route{
+    width: 150px;
+}
+
+.price {
+    width: 100px;
+}
+
+.text {
+    font-size: 12px;
+}
+
+.time {
+    width: 500px;
+}
+
+.info {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container{
+    text-align: center;
+}
+
+.container_right{
+    text-align: right;
+}

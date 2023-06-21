@@ -1,10 +1,10 @@
 import '../../App.css';
-import './header.css';
+import styles from './Header.module.css';
 export const HeaderComponent = () => {
     return(
-      <header className="header">
+      <header className={styles.header}>
           <div className="container">
-              <h1 className="title">Список авиабилетов</h1>
+              <h1 className={styles.title}>Список авиабилетов</h1>
           </div>
       </header>
     );

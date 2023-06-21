@@ -1,0 +1,43 @@
+.ranges{
+    min-width: 250px;
+    position: relative;
+}
+
+.ranges_title{
+    margin: 10px;
+    font-size: 16px;
+}
+
+.ranges_subtitle {
+    margin: 5px;
+    font-size: 12px;
+}
+
+.ranges_subtitle_min{
+    text-align: left;
+}
+
+.range{
+    width: 100%;
+}
+
+.button{
+    text-align: right;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 5px;
+
+    background: var(--blue);
+    color: white;
+
+    border: 1px solid transparent;
+
+    transition: all .3s;
+}
+
+.button:hover{
+    color: black;
+    border: 1px solid #000;
+    background: transparent;
+}
+

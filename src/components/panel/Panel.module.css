@@ -1,0 +1,16 @@
+.panel{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 20px;
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkboxes_item{
+    align-items: center;
+}

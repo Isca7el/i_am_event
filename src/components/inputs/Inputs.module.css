@@ -1,0 +1,14 @@
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    width: 350px;
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 5px 10px;
+
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+}

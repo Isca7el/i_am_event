@@ -1,16 +1,19 @@
 export const rangesArr = ['price', 'stops', 'totalFlightTime'];
 export const range = {
     price: {
+        title: 'Фильтр по стоимости',
         min: '',
         max: '',
         currentValue: ''
     },
     stops: {
+        title: 'Фильтр по количеству пересадок',
         min: '',
         max: '',
         currentValue: '',
     },
     totalFlightTime: {
+        title: 'Фильтр по общему времени полета',
         min: '',
         max: '',
         currentValue: '',
